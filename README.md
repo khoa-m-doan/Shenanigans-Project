@@ -3,7 +3,7 @@ MARKDOWN README - Not pretty yet<br/>
 Team Name:<br/>
 <br/>
 Team Members:<br/>
-    Aaron Bardley<br/>
+    Aaron Bardsley<br/>
     Eric Harty<br/>
     Keegan Wantz<br/>
     Khoa Doan<br/>
