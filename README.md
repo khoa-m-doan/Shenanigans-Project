@@ -1,6 +1,6 @@
-MARKDOWN README - Not pretty yet<br/>
+MARKDOWN README<br/>
 <br/>
-Team Name:<br/>
+Team Name: Shenanigans<br/>
 <br/>
 Team Members:<br/>
     Aaron Bardsley<br/>
