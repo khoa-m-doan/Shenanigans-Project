@@ -1,3 +1,4 @@
+
 package Model;
 
 import java.math.BigDecimal;
@@ -7,29 +8,44 @@ import java.util.LinkedList;
  * A component for a DIY project.
  * 
  * @author Eric Harty hartye@uw.edu
- * @version .5
+ * @version .75
  */
 public class DIYComponent /*? implements ComponentList ?*/ {
 
     /**The name of this component.*/
-    private String myName;
+    private final String myName;
 
     /**The quantity of the component in the project.*/
     private int myQuantity;
 
     /**The unit price of the component.*/
-    private BigDecimal myPrice;
+    private final BigDecimal myCost;
     
     /**The unit price per month of the component.*/
-    private BigDecimal myPricePerMonth;
+    private final BigDecimal myCostPerMonth;
+    
+    /**The double width of the component.*/
+    private final double myWidth;
+    
+    /**The double length of the component.*/
+    private final double myLength;
+    
+    /**The double height of the component.*/
+    private final double myHeight;
+    
+    /**The double weight of the component.*/
+    private final double myWeight;
+    
+    /**The material of this component.*/
+    private final String myMaterial;
     
     /**The estimated man-hours.*/
-    private double myManHrs;
+    private final double myManHrs;
     
     /**The list of subcomponents.*/
-    public LinkedList<DIYComponent> mySubComponents = new LinkedList<DIYComponent>();
-
-
+    public final LinkedList<DIYComponent> mySubComponents;
+    
+    
     /**
      * Constructs a DIYComponent with the specified name and quantity.
      * 
@@ -37,96 +53,154 @@ public class DIYComponent /*? implements ComponentList ?*/ {
      * @param theQuantity
      * @throws IllegalArgumentException if theQuantity is less than or equal to zero
      */
-    public DIYComponent(final String theName, final int theQuantity) {
+    public DIYComponent(final String theName, final int theInitQuantity, 
+    		final BigDecimal theCost, final BigDecimal theCostPerMonth, 
+    		final double theWidth, final double theLength, final double theHeight,
+    		final double theWeight, final String theMaterial, final double theManHrs,
+    		final LinkedList<DIYComponent> theSubComponents) {
+		myName = theName;
+		myCost = theCost;
+		myCostPerMonth = theCostPerMonth;
+		myWidth = theWidth;
+		myLength = theLength;
+		myHeight = theHeight;
+		myWeight = theWeight;
+		myMaterial = theMaterial;
+		myManHrs = theManHrs;
+		mySubComponents = theSubComponents;
+		
+		if(theInitQuantity <= 0) {
+			throw new IllegalArgumentException();
+		}
+		myQuantity = theInitQuantity;
+	}
 
-        if (theQuantity <= 0) {
-            throw new IllegalArgumentException("We'll figure out what to do later");
-        }
-        myName = theName;
-        myQuantity = theQuantity; 
+   
+    /**
+     * Sets the quantity of the component.
+     * 
+     * @param theQuantity
+     */
+    public final void setQuantity(final int theQuantity) {
+    	myQuantity = theQuantity;
     }
+    
+	/**
+	 * @return the Quantity
+	 */
+	public int getQuantity() {
+		return myQuantity;
+	}
 
-    //Still need to figure out the constructor/setter combo we want for creating new components,
-    //  and editing subcomponents?
-    
-    /**
-     * Sets the unit price.
-     * 
-     * @param thePrice
-     */
-    public final void setPrice(final BigDecimal thePrice) {
-        myPrice = thePrice;
-    }
-    
-    /**
-     * Sets the man-hours.
-     * 
-     * @param theTime
-     */
-    public final void setTime(final double theTime) {
-        myManHrs = theTime;
-    }
-    
-    /**
-     * Adds a subcomponent to the subcomponent list.
-     * 
-     * @param the component being added
-     */
-    public final void AddSubComp(final DIYComponent theComp) {
-    	mySubComponents.add(theComp);
-    }
-    
+	/**
+	 * @return the Name
+	 */
+	public String getName() {
+		return myName;
+	}
+
+	/**
+	 * @return the Width
+	 */
+	public double getWidth() {
+		return myWidth;
+	}
+
+	/**
+	 * @return the Length
+	 */
+	public double getLength() {
+		return myLength;
+	}
+
+	/**
+	 * @return the Height
+	 */
+	public double getHeight() {
+		return myHeight;
+	}
+
+	/**
+	 * @return the myWeight
+	 */
+	public double getWeight() {
+		return myWeight;
+	}
+
+	/**
+	 * @return the myMaterial
+	 */
+	public String getMaterial() {
+		return myMaterial;
+	}
+
+	/**
+	 * @return the SubComponents
+	 */
+	public LinkedList<DIYComponent> getSubComponents() {
+		return mySubComponents;
+	}
+
     /**
      * Returns the Unit price of this component.
      * 
-     * @return the BigDecimal price
+     * @return the BigDecimal cost
      */
-    public final BigDecimal getSinglePrice() {
-    	return myPrice;
+    public final BigDecimal getUnitCost() {
+    	return myCost;
     }
 
     /**
      * Calculates and returns the total price of this component 
      * and all subcomponents.
      * 
-     * @return the BigDecimal price
+     * @return the BigDecimal cost
      */
-    public final BigDecimal getPrice() {
-        BigDecimal total = myPrice;
+    public final BigDecimal getCost() {
+        BigDecimal total = myCost;
     	total.multiply(new BigDecimal(myQuantity));
         
         for(DIYComponent c : mySubComponents) {
-        	total.add(c.getPrice());
+        	total.add(c.getCost());
         }
         
     	return total;
     }
     
     /**
-     * Returns the Unit price-per-month of this component.
+     * Returns the Unit cost-per-month of this component.
      * 
      * @return the BigDecimal price
      */
-    public final BigDecimal getSinglePPM() {
-    	return myPricePerMonth;
+    public final BigDecimal getUnitCPM() {
+    	return myCostPerMonth;
     }
     
     /**
      * Calculates and returns the total price-per-month of 
      * this component and all subcomponents.
      * 
-     * @return the BigDecimal price per month
+     * @return the BigDecimal cost per month
      */
-    public final BigDecimal getPricePerMonth() {
-        BigDecimal total = myPricePerMonth;
+    public final BigDecimal getCostPerMonth() {
+        BigDecimal total = myCostPerMonth;
     	total.multiply(new BigDecimal(myQuantity));
         
         for(DIYComponent c : mySubComponents) {
-        	total.add(c.getPricePerMonth());
+        	total.add(c.getCostPerMonth());
         }
         
     	return total;
     }
+    
+    /**
+     * Returns the Unit man-hours of this component.
+     * 
+     * @return the myManHrs
+	 */
+	public double getUnitManHrs() {
+		return myManHrs;
+	}
     
     /**
      * Returns the estimated man-hours for this component 
@@ -134,15 +208,15 @@ public class DIYComponent /*? implements ComponentList ?*/ {
      * 
      * @return the double ManHours
      */
-    public final double getTime() {
+    public final double getManHrs() {
     	double hrs = myManHrs;
     	for(DIYComponent c : mySubComponents) {
-    		hrs += c.getTime();
+    		hrs += c.getManHrs();
         }
     	return hrs;
     }
 
-    //TBD
+    
     
 	
 
