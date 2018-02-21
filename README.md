@@ -22,3 +22,5 @@ New Component Sequence Diagram<br/>
 ![New Component Sequence Diagram](/Images/NewComponentSequenceDiagram.png)<br/>
 Startup Sequence Diagram<br/>
 ![Startup Sequence Diagram](/Images/StartupSequenceDiagram.png)<br/>
+About Us Sequence Diagram<br/>
+![About Us Sequence Diagram](/Images/AboutMenuSequenceDiagram.png)<br/>
