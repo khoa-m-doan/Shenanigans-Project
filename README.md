@@ -1,4 +1,4 @@
-**# Shenanigans**<br/>
+**Shenanigans**<br/>
 <br/>
 **Team Members:**<br/>
     Aaron Bardsley<br/>
@@ -12,17 +12,17 @@ Email: TCSS360 [AT] kairuni.com <br/>
 [Task Matrix](https://docs.google.com/spreadsheets/d/1cd-B-B6hTsNera2vNb0cvDB4_CXkt8JELg7jrEB-_PA/edit?usp=sharing)<br/>
 
 <br/>
-Database Diagram <br/>
+Database Diagram
 ![Database Diagram](/Images/DatabaseDiagram.png)<br/>
 <br/>
-GUI Class Diagram <br/>
+GUI Class Diagram
 ![GUI Class Diagram](/Images/GUIClassDiagram.png)<br/>
 <br/>
-Basic Model Class Diagram <br/>
+Basic Model Class Diagram
 ![Model Basic Class Diagram](/Images/ModelBasicDiagram.png)<br/>
 <br/>
-New Component Sequence Diagram <br/>
+New Component Sequence Diagram
 ![New Component Sequence Diagram](/Images/NewComponentSequenceDiagram.png)<br/>
 <br/>
-Startup Sequence Diagram <br/>
+Startup Sequence Diagram
 ![Startup Sequence Diagram](/Images/StartupSequenceDiagram.png)<br/>
