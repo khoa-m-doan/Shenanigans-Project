@@ -7,7 +7,7 @@ import java.util.LinkedList;
 /**
  * A component for a DIY project.
  * 
- * @author Eric Harty hartye@uw.edu
+ * @author Eric Harty - hartye@uw.edu
  * @version .75
  */
 public class DIYComponent /*? implements ComponentList ?*/ {
@@ -48,6 +48,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
     
     /**
      * Constructs a DIYComponent with the specified name and quantity.
+     * @author Eric Harty - hartye@uw.edu
      * 
      * @param theName
      * @param theQuantity
@@ -78,6 +79,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
    
     /**
      * Sets the quantity of the component.
+     * @author Eric Harty - hartye@uw.edu
      * 
      * @param theQuantity
      */
@@ -86,6 +88,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
     }
     
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the Quantity
 	 */
 	public int getQuantity() {
@@ -93,6 +96,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the Name
 	 */
 	public String getName() {
@@ -100,6 +104,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the Width
 	 */
 	public double getWidth() {
@@ -107,6 +112,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the Length
 	 */
 	public double getLength() {
@@ -114,6 +120,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the Height
 	 */
 	public double getHeight() {
@@ -121,6 +128,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the myWeight
 	 */
 	public double getWeight() {
@@ -128,6 +136,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the myMaterial
 	 */
 	public String getMaterial() {
@@ -135,6 +144,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the SubComponents
 	 */
 	public LinkedList<DIYComponent> getSubComponents() {
@@ -143,6 +153,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
 
     /**
      * Returns the Unit price of this component.
+     * @author Eric Harty - hartye@uw.edu
      * 
      * @return the BigDecimal cost
      */
@@ -153,6 +164,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
     /**
      * Calculates and returns the total price of this component 
      * and all subcomponents.
+     * @author Eric Harty - hartye@uw.edu
      * 
      * @return the BigDecimal cost
      */
@@ -169,6 +181,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
     
     /**
      * Returns the Unit cost-per-month of this component.
+     * @author Eric Harty - hartye@uw.edu
      * 
      * @return the BigDecimal price
      */
@@ -179,6 +192,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
     /**
      * Calculates and returns the total price-per-month of 
      * this component and all subcomponents.
+     * @author Eric Harty - hartye@uw.edu
      * 
      * @return the BigDecimal cost per month
      */
@@ -195,6 +209,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
     
     /**
      * Returns the Unit man-hours of this component.
+     * @author Eric Harty - hartye@uw.edu
      * 
      * @return the myManHrs
 	 */
@@ -205,6 +220,7 @@ public class DIYComponent /*? implements ComponentList ?*/ {
     /**
      * Returns the estimated man-hours for this component 
      * and all subcomponents.
+     * @author Eric Harty - hartye@uw.edu
      * 
      * @return the double ManHours
      */
