@@ -27,6 +27,7 @@ public class DIYProject {
     
     /**
      * Constructs a DIYProject with a default name and empty fields.
+     * @author Eric Harty - hartye@uw.edu
      * 
      */
     public DIYProject() {
@@ -37,6 +38,7 @@ public class DIYProject {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the Name
 	 */
 	public String getName() {
@@ -44,6 +46,7 @@ public class DIYProject {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the ManHrs
 	 */
 	public double getManHrs() {
@@ -51,6 +54,7 @@ public class DIYProject {
 	}
 
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the MiscCost
 	 */
 	public BigDecimal getMiscCost() {
@@ -58,6 +62,7 @@ public class DIYProject {
 	}
 	
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @return the myComponents
 	 */
 	public LinkedList<DIYComponent> getComponents() {
@@ -66,6 +71,7 @@ public class DIYProject {
 
 	/**
 	 * Calculates and returns the cost per month for this project.
+	 * @author Eric Harty - hartye@uw.edu
 	 * 
 	 * @return the CostPerMonth
 	 */
@@ -79,6 +85,7 @@ public class DIYProject {
 	
 	/**
 	 * Calculates and returns the total up front month for this project.
+	 * @author Eric Harty - hartye@uw.edu
 	 * 
 	 * @return the Total Cost
 	 */
@@ -92,6 +99,7 @@ public class DIYProject {
 	
 	/**
 	 * Calculates and returns the total man-hours for this project.
+	 * @author Eric Harty - hartye@uw.edu
 	 * 
 	 * @return the total man-hours
 	 */
@@ -105,6 +113,7 @@ public class DIYProject {
 
 	
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @param myName the myName to set
 	 */
 	public void setName(String theName) {
@@ -119,6 +128,7 @@ public class DIYProject {
 	}
 	
 	/**
+	 * @author Eric Harty - hartye@uw.edu
 	 * @param the MiscCost to set
 	 */
 	public void setMyMiscCost(BigDecimal theMiscCost) {
@@ -128,6 +138,7 @@ public class DIYProject {
 
 	/**
 	 * Adds a component to the component list.
+	 * @author Eric Harty - hartye@uw.edu
 	 * 
 	 * @param the Component to add
 	 */
@@ -137,6 +148,7 @@ public class DIYProject {
 	
 	/**
 	 * Removes a component from the component list.
+	 * @author Eric Harty - hartye@uw.edu
 	 * 
 	 * @param the Component to remove
 	 * @throws NoSuchElementException
